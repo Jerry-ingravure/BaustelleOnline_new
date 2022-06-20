@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Demo1.Models.po_avise_requests>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.po_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.point_in_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.item_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.item_description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.off_loading_advise)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ordered_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.state)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.po_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.point_in_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.item_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.item_description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.off_loading_advise)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ordered_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.state)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.uid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.uid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.uid })
+        </td>
+    </tr>
+}
+
+</table>

@@ -32,21 +32,23 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
+               @Html.DisplayNameFor(model => model.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Besteller)
+                @Html.DisplayNameFor(model => model.Besteller)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Entladestellen)
+                @Html.DisplayNameFor(model => model.Entladestellen)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.status)
+                 @Html.DisplayNameFor(model => model.status)
             </td>
             <td>
+                <p>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                <p>
             </td>
         </tr>
 }

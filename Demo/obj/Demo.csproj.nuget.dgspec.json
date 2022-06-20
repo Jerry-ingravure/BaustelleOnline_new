@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JerryMathew\\source\\repos\\Demo\\Demo.csproj": {}
+    "C:\\Github_repos\\BaustelleOnline_new\\Demo\\Demo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JerryMathew\\source\\repos\\Demo\\Demo.csproj": {
+    "C:\\Github_repos\\BaustelleOnline_new\\Demo\\Demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JerryMathew\\source\\repos\\Demo\\Demo.csproj",
+        "projectUniqueName": "C:\\Github_repos\\BaustelleOnline_new\\Demo\\Demo.csproj",
         "projectName": "Demo",
-        "projectPath": "C:\\Users\\JerryMathew\\source\\repos\\Demo\\Demo.csproj",
+        "projectPath": "C:\\Github_repos\\BaustelleOnline_new\\Demo\\Demo.csproj",
         "packagesPath": "C:\\Users\\JerryMathew\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JerryMathew\\source\\repos\\Demo\\obj\\",
+        "outputPath": "C:\\Github_repos\\BaustelleOnline_new\\Demo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,9 +44,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.5, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
             }
           },
           "imports": [

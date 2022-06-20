@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="inGravureModelStoreContainer" CdmEntityContainer="inGravureEntities2">
+    <EntitySetMapping Name="po_avise_requests">
+      <EntityTypeMapping TypeName="inGravureModel.po_avise_requests">
+        <MappingFragment StoreEntitySet="po_avise_requests">
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="po_no" ColumnName="po_no" />
+          <ScalarProperty Name="point_in_time" ColumnName="point_in_time" />
+          <ScalarProperty Name="item_no" ColumnName="item_no" />
+          <ScalarProperty Name="item_description" ColumnName="item_description" />
+          <ScalarProperty Name="off_loading_advise" ColumnName="off_loading_advise" />
+          <ScalarProperty Name="ordered_by" ColumnName="ordered_by" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="po_avise_transportations">
+      <EntityTypeMapping TypeName="inGravureModel.po_avise_transportations">
+        <MappingFragment StoreEntitySet="po_avise_transportations">
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="po_avise_request_uid" ColumnName="po_avise_request_uid" />
+          <ScalarProperty Name="transportation_id" ColumnName="transportation_id" />
+          <ScalarProperty Name="delivery_date" ColumnName="delivery_date" />
+          <ScalarProperty Name="clock_timing" ColumnName="clock_timing" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="means_of_transportation" ColumnName="means_of_transportation" />
+          <ScalarProperty Name="material" ColumnName="material" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
