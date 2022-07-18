@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="inGravureModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'inGravure.dbo.po_avise_view' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="po_avise_view">
+          <Property Name="ordered_by" Type="nvarchar(max)" />
+          <Property Name="unloading_location" Type="nvarchar(max)" />
+          <Property Name="type_of_verhicle" Type="nvarchar(max)" />
+          <Property Name="material" Type="nvarchar(max)" />
+          <Property Name="supplier" Type="nvarchar(max)" />
+          <Property Name="qty" Type="float" />
+          <Property Name="uom" Type="nvarchar(max)" />
+          <Property Name="state" Type="nvarchar(max)" />
+          <Property Name="transport_typ" Type="nvarchar(max)" />
+          <Property Name="duration" Type="float" />
+          <Property Name="start_time" Type="datetime" />
+          <Property Name="unloading" Type="nvarchar(max)" />
+        </EntityType>-->
+  <EntityContainer Name="inGravureModel1StoreContainer" />
+</Schema>

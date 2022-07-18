@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="inGravureModelStoreContainer" CdmEntityContainer="inGravureEntities">
+    <EntitySetMapping Name="po_avise_requests">
+      <EntityTypeMapping TypeName="inGravureModel.po_avise_requests">
+        <MappingFragment StoreEntitySet="po_avise_requests">
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="po_no" ColumnName="po_no" />
+          <ScalarProperty Name="Zeitpunkt" ColumnName="Zeitpunkt" />
+          <ScalarProperty Name="Besteller" ColumnName="Besteller" />
+          <ScalarProperty Name="item_description" ColumnName="item_description" />
+          <ScalarProperty Name="off_loading_advise" ColumnName="off_loading_advise" />
+          <ScalarProperty Name="Entladung" ColumnName="Entladung" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

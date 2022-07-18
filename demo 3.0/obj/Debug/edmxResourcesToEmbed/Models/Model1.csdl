@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="inGravureModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="po_avise_entrance_unloading">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="Guid" Nullable="false" />
+    <Property Name="fk_po_avise_request_uid" Type="Guid" />
+    <Property Name="ordered_by" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="unloading_location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="type_of_verhicle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="arrival_time" Type="DateTime" Precision="3" />
+    <Property Name="dur" Type="Double" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="po_avise_requests" Relationship="inGravureModel.FK_po_avise_entrance_unloading_po_avise_requests" FromRole="po_avise_entrance_unloading" ToRole="po_avise_requests" />
+  </EntityType>
+  <EntityType Name="po_avise_requests">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="Guid" Nullable="false" />
+    <Property Name="fk_po_avise_request_uid" Type="Guid" />
+    <Property Name="material" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="supplier" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="qty" Type="Double" />
+    <Property Name="uom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="unloading" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="po_avise_entrance_unloading" Relationship="inGravureModel.FK_po_avise_entrance_unloading_po_avise_requests" FromRole="po_avise_requests" ToRole="po_avise_entrance_unloading" />
+    <NavigationProperty Name="po_avise_transportations" Relationship="inGravureModel.FK_po_avise_transportations_po_avise_requests" FromRole="po_avise_requests" ToRole="po_avise_transportations" />
+  </EntityType>
+  <EntityType Name="po_avise_transportations">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="Guid" Nullable="false" />
+    <Property Name="fk_po_avise_request_uid" Type="Guid" />
+    <Property Name="start_time" Type="DateTime" Precision="3" />
+    <Property Name="duration" Type="Double" />
+    <Property Name="transport_typ" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="material" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="qty" Type="Double" />
+    <Property Name="uom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="po_avise_requests" Relationship="inGravureModel.FK_po_avise_transportations_po_avise_requests" FromRole="po_avise_transportations" ToRole="po_avise_requests" />
+  </EntityType>
+  <EntityContainer Name="inGravureEntities6" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="po_avise_entrance_unloading" EntityType="Self.po_avise_entrance_unloading" />
+    <EntitySet Name="po_avise_requests" EntityType="Self.po_avise_requests" />
+    <EntitySet Name="po_avise_transportations" EntityType="Self.po_avise_transportations" />
+    <AssociationSet Name="FK_po_avise_entrance_unloading_po_avise_requests" Association="inGravureModel.FK_po_avise_entrance_unloading_po_avise_requests">
+      <End Role="po_avise_requests" EntitySet="po_avise_requests" />
+      <End Role="po_avise_entrance_unloading" EntitySet="po_avise_entrance_unloading" />
+    </AssociationSet>
+    <AssociationSet Name="FK_po_avise_transportations_po_avise_requests" Association="inGravureModel.FK_po_avise_transportations_po_avise_requests">
+      <End Role="po_avise_requests" EntitySet="po_avise_requests" />
+      <End Role="po_avise_transportations" EntitySet="po_avise_transportations" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_po_avise_entrance_unloading_po_avise_requests">
+    <End Type="inGravureModel.po_avise_requests" Role="po_avise_requests" Multiplicity="0..1" />
+    <End Type="inGravureModel.po_avise_entrance_unloading" Role="po_avise_entrance_unloading" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="po_avise_requests">
+        <PropertyRef Name="uid" />
+      </Principal>
+      <Dependent Role="po_avise_entrance_unloading">
+        <PropertyRef Name="fk_po_avise_request_uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_po_avise_transportations_po_avise_requests">
+    <End Type="inGravureModel.po_avise_requests" Role="po_avise_requests" Multiplicity="0..1" />
+    <End Type="inGravureModel.po_avise_transportations" Role="po_avise_transportations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="po_avise_requests">
+        <PropertyRef Name="uid" />
+      </Principal>
+      <Dependent Role="po_avise_transportations">
+        <PropertyRef Name="fk_po_avise_request_uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

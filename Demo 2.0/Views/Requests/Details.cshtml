@@ -1,0 +1,74 @@
+﻿@model Demo_2._0.Models.po_avise_requests
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>po_avise_requests</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.po_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.po_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zeitpunkt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zeitpunkt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Besteller)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Besteller)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.item_description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.item_description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.off_loading_advise)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.off_loading_advise)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Entladung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Entladung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.uid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

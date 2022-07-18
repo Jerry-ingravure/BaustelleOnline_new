@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="inGravureModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="po_avise_entrance_unloading">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="fk_po_avise_request_uid" Type="uniqueidentifier" />
+          <Property Name="ordered_by" Type="nvarchar(max)" />
+          <Property Name="unloading_location" Type="nvarchar(max)" />
+          <Property Name="type_of_verhicle" Type="nvarchar(max)" />
+          <Property Name="arrival_time" Type="datetime" />
+          <Property Name="dur" Type="float" />
+          <Property Name="status" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="po_avise_requests">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="fk_po_avise_request_uid" Type="uniqueidentifier" />
+          <Property Name="material" Type="nvarchar(max)" />
+          <Property Name="supplier" Type="nvarchar(max)" />
+          <Property Name="qty" Type="float" />
+          <Property Name="uom" Type="nvarchar(max)" />
+          <Property Name="unloading" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="po_avise_transportations">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="fk_po_avise_request_uid" Type="uniqueidentifier" />
+          <Property Name="start_time" Type="datetime" />
+          <Property Name="duration" Type="float" />
+          <Property Name="transport_typ" Type="nvarchar(max)" />
+          <Property Name="state" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_po_avise_entrance_unloading_po_avise_requests">
+          <End Role="po_avise_requests" Type="Self.po_avise_requests" Multiplicity="0..1" />
+          <End Role="po_avise_entrance_unloading" Type="Self.po_avise_entrance_unloading" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="po_avise_requests">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="po_avise_entrance_unloading">
+              <PropertyRef Name="fk_po_avise_request_uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_po_avise_transportations_po_avise_requests">
+          <End Role="po_avise_requests" Type="Self.po_avise_requests" Multiplicity="0..1" />
+          <End Role="po_avise_transportations" Type="Self.po_avise_transportations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="po_avise_requests">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="po_avise_transportations">
+              <PropertyRef Name="fk_po_avise_request_uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="inGravureModelStoreContainer">
+          <EntitySet Name="po_avise_entrance_unloading" EntityType="Self.po_avise_entrance_unloading" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="po_avise_requests" EntityType="Self.po_avise_requests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="po_avise_transportations" EntityType="Self.po_avise_transportations" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_po_avise_entrance_unloading_po_avise_requests" Association="Self.FK_po_avise_entrance_unloading_po_avise_requests">
+            <End Role="po_avise_requests" EntitySet="po_avise_requests" />
+            <End Role="po_avise_entrance_unloading" EntitySet="po_avise_entrance_unloading" />
+          </AssociationSet>
+          <AssociationSet Name="FK_po_avise_transportations_po_avise_requests" Association="Self.FK_po_avise_transportations_po_avise_requests">
+            <End Role="po_avise_requests" EntitySet="po_avise_requests" />
+            <End Role="po_avise_transportations" EntitySet="po_avise_transportations" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="inGravureModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="po_avise_entrance_unloading">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="Guid" Nullable="false" />
+          <Property Name="fk_po_avise_request_uid" Type="Guid" />
+          <Property Name="ordered_by" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="unloading_location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="type_of_verhicle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="arrival_time" Type="DateTime" Precision="3" />
+          <Property Name="dur" Type="Double" />
+          <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="po_avise_requests" Relationship="Self.FK_po_avise_entrance_unloading_po_avise_requests" FromRole="po_avise_entrance_unloading" ToRole="po_avise_requests" />
+        </EntityType>
+        <EntityType Name="po_avise_requests">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="Guid" Nullable="false" />
+          <Property Name="fk_po_avise_request_uid" Type="Guid" />
+          <Property Name="material" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="supplier" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="qty" Type="Double" />
+          <Property Name="uom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="unloading" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="po_avise_entrance_unloading" Relationship="Self.FK_po_avise_entrance_unloading_po_avise_requests" FromRole="po_avise_requests" ToRole="po_avise_entrance_unloading" />
+          <NavigationProperty Name="po_avise_transportations" Relationship="Self.FK_po_avise_transportations_po_avise_requests" FromRole="po_avise_requests" ToRole="po_avise_transportations" />
+        </EntityType>
+        <EntityType Name="po_avise_transportations">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="Guid" Nullable="false" />
+          <Property Name="fk_po_avise_request_uid" Type="Guid" />
+          <Property Name="start_time" Type="DateTime" Precision="3" />
+          <Property Name="duration" Type="Double" />
+          <Property Name="transport_typ" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="state" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="po_avise_requests" Relationship="Self.FK_po_avise_transportations_po_avise_requests" FromRole="po_avise_transportations" ToRole="po_avise_requests" />
+        </EntityType>
+        <Association Name="FK_po_avise_entrance_unloading_po_avise_requests">
+          <End Role="po_avise_requests" Type="Self.po_avise_requests" Multiplicity="0..1" />
+          <End Role="po_avise_entrance_unloading" Type="Self.po_avise_entrance_unloading" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="po_avise_requests">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="po_avise_entrance_unloading">
+              <PropertyRef Name="fk_po_avise_request_uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_po_avise_transportations_po_avise_requests">
+          <End Role="po_avise_requests" Type="Self.po_avise_requests" Multiplicity="0..1" />
+          <End Role="po_avise_transportations" Type="Self.po_avise_transportations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="po_avise_requests">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="po_avise_transportations">
+              <PropertyRef Name="fk_po_avise_request_uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="inGravureEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="po_avise_entrance_unloading" EntityType="Self.po_avise_entrance_unloading" />
+          <EntitySet Name="po_avise_requests" EntityType="Self.po_avise_requests" />
+          <EntitySet Name="po_avise_transportations" EntityType="Self.po_avise_transportations" />
+          <AssociationSet Name="FK_po_avise_entrance_unloading_po_avise_requests" Association="Self.FK_po_avise_entrance_unloading_po_avise_requests">
+            <End Role="po_avise_requests" EntitySet="po_avise_requests" />
+            <End Role="po_avise_entrance_unloading" EntitySet="po_avise_entrance_unloading" />
+          </AssociationSet>
+          <AssociationSet Name="FK_po_avise_transportations_po_avise_requests" Association="Self.FK_po_avise_transportations_po_avise_requests">
+            <End Role="po_avise_requests" EntitySet="po_avise_requests" />
+            <End Role="po_avise_transportations" EntitySet="po_avise_transportations" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="inGravureModelStoreContainer" CdmEntityContainer="inGravureEntities">
+          <EntitySetMapping Name="po_avise_entrance_unloading">
+            <EntityTypeMapping TypeName="inGravureModel.po_avise_entrance_unloading">
+              <MappingFragment StoreEntitySet="po_avise_entrance_unloading">
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="fk_po_avise_request_uid" ColumnName="fk_po_avise_request_uid" />
+                <ScalarProperty Name="ordered_by" ColumnName="ordered_by" />
+                <ScalarProperty Name="unloading_location" ColumnName="unloading_location" />
+                <ScalarProperty Name="type_of_verhicle" ColumnName="type_of_verhicle" />
+                <ScalarProperty Name="arrival_time" ColumnName="arrival_time" />
+                <ScalarProperty Name="dur" ColumnName="dur" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="po_avise_requests">
+            <EntityTypeMapping TypeName="inGravureModel.po_avise_requests">
+              <MappingFragment StoreEntitySet="po_avise_requests">
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="fk_po_avise_request_uid" ColumnName="fk_po_avise_request_uid" />
+                <ScalarProperty Name="material" ColumnName="material" />
+                <ScalarProperty Name="supplier" ColumnName="supplier" />
+                <ScalarProperty Name="qty" ColumnName="qty" />
+                <ScalarProperty Name="uom" ColumnName="uom" />
+                <ScalarProperty Name="unloading" ColumnName="unloading" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="po_avise_transportations">
+            <EntityTypeMapping TypeName="inGravureModel.po_avise_transportations">
+              <MappingFragment StoreEntitySet="po_avise_transportations">
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="fk_po_avise_request_uid" ColumnName="fk_po_avise_request_uid" />
+                <ScalarProperty Name="start_time" ColumnName="start_time" />
+                <ScalarProperty Name="duration" ColumnName="duration" />
+                <ScalarProperty Name="transport_typ" ColumnName="transport_typ" />
+                <ScalarProperty Name="state" ColumnName="state" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

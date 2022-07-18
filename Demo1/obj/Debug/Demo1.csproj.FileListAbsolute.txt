@@ -81,3 +81,4 @@ C:\Github_repos\BaustelleOnline_new\Demo1\obj\Debug\Demo1.csproj.CoreCompileInpu
 C:\Github_repos\BaustelleOnline_new\Demo1\obj\Debug\Demo1.csproj.CopyComplete
 C:\Github_repos\BaustelleOnline_new\Demo1\obj\Debug\Demo1.dll
 C:\Github_repos\BaustelleOnline_new\Demo1\obj\Debug\Demo1.pdb
+C:\Github_repos\BaustelleOnline_new\Demo1\bin\Rotativa.dll

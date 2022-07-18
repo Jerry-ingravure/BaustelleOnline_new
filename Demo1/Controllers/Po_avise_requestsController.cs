@@ -12,10 +12,13 @@ namespace Demo1.Controllers
 {
     public class Po_avise_requestsController : Controller
     {
-        private inGravureEntities2 db = new inGravureEntities2();
+        private inGravureEntities3 db = new inGravureEntities3();
 
         // GET: Po_avise_requests
-        public ActionResult Index() => View(db.po_avise_requests.ToList());
+        public ActionResult Index()
+        {
+            return View(db.po_avise_requests.ToList());
+        }
 
         // GET: Po_avise_requests/Details/5
         public ActionResult Details(Guid? id)

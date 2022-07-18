@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="inGravureModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="po_avise_requests">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="Guid" Nullable="false" />
+    <Property Name="po_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Zeitpunkt" Type="DateTime" Precision="0" />
+    <Property Name="Besteller" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="item_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="off_loading_advise" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Entladung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="po_avise_transportations">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="Guid" Nullable="false" />
+    <Property Name="po_avise_request_uid" Type="Guid" />
+    <Property Name="transportation_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_date" Type="DateTime" Precision="0" />
+    <Property Name="clock_timing" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="means_of_transportation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="material" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="inGravureEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="po_avise_requests" EntityType="Self.po_avise_requests" />
+    <EntitySet Name="po_avise_transportations" EntityType="Self.po_avise_transportations" />
+  </EntityContainer>
+</Schema>

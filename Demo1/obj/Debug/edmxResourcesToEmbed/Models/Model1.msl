@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="inGravureModelStoreContainer" CdmEntityContainer="inGravureEntities2">
+  <EntityContainerMapping StorageEntityContainer="inGravureModelStoreContainer" CdmEntityContainer="inGravureEntities3">
     <EntitySetMapping Name="po_avise_requests">
       <EntityTypeMapping TypeName="inGravureModel.po_avise_requests">
         <MappingFragment StoreEntitySet="po_avise_requests">

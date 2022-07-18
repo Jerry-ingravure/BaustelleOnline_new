@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="inGravureModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="po_avise_requests">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="po_no" Type="nvarchar(max)" />
+          <Property Name="Zeitpunkt" Type="date" />
+          <Property Name="Besteller" Type="nvarchar(max)" />
+          <Property Name="item_description" Type="nvarchar(max)" />
+          <Property Name="off_loading_advise" Type="nchar" MaxLength="10" />
+          <Property Name="Entladung" Type="nvarchar(max)" />
+          <Property Name="status" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="po_avise_transportations">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="po_avise_request_uid" Type="uniqueidentifier" />
+          <Property Name="transportation_id" Type="nvarchar(max)" />
+          <Property Name="delivery_date" Type="date" />
+          <Property Name="clock_timing" Type="nvarchar(max)" />
+          <Property Name="number" Type="nvarchar(max)" />
+          <Property Name="means_of_transportation" Type="nvarchar(max)" />
+          <Property Name="material" Type="nvarchar(max)" />
+          <Property Name="state" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="inGravureModel1StoreContainer">
+          <EntitySet Name="po_avise_requests" EntityType="Self.po_avise_requests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="po_avise_transportations" EntityType="Self.po_avise_transportations" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="inGravureModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="po_avise_requests">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="Guid" Nullable="false" />
+          <Property Name="po_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Zeitpunkt" Type="DateTime" Precision="0" />
+          <Property Name="Besteller" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="item_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="off_loading_advise" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Entladung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="po_avise_transportations">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="Guid" Nullable="false" />
+          <Property Name="po_avise_request_uid" Type="Guid" />
+          <Property Name="transportation_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="delivery_date" Type="DateTime" Precision="0" />
+          <Property Name="clock_timing" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="means_of_transportation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="material" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="state" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="inGravureEntities4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="po_avise_requests" EntityType="Self.po_avise_requests" />
+          <EntitySet Name="po_avise_transportations" EntityType="Self.po_avise_transportations" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="inGravureModel1StoreContainer" CdmEntityContainer="inGravureEntities4">
+          <EntitySetMapping Name="po_avise_requests">
+            <EntityTypeMapping TypeName="inGravureModel1.po_avise_requests">
+              <MappingFragment StoreEntitySet="po_avise_requests">
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="po_no" ColumnName="po_no" />
+                <ScalarProperty Name="Zeitpunkt" ColumnName="Zeitpunkt" />
+                <ScalarProperty Name="Besteller" ColumnName="Besteller" />
+                <ScalarProperty Name="item_description" ColumnName="item_description" />
+                <ScalarProperty Name="off_loading_advise" ColumnName="off_loading_advise" />
+                <ScalarProperty Name="Entladung" ColumnName="Entladung" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="po_avise_transportations">
+            <EntityTypeMapping TypeName="inGravureModel1.po_avise_transportations">
+              <MappingFragment StoreEntitySet="po_avise_transportations">
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="po_avise_request_uid" ColumnName="po_avise_request_uid" />
+                <ScalarProperty Name="transportation_id" ColumnName="transportation_id" />
+                <ScalarProperty Name="delivery_date" ColumnName="delivery_date" />
+                <ScalarProperty Name="clock_timing" ColumnName="clock_timing" />
+                <ScalarProperty Name="number" ColumnName="number" />
+                <ScalarProperty Name="means_of_transportation" ColumnName="means_of_transportation" />
+                <ScalarProperty Name="material" ColumnName="material" />
+                <ScalarProperty Name="state" ColumnName="state" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

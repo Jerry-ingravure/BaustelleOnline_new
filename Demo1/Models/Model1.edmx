@@ -68,7 +68,7 @@
           <Property Name="material" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="state" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="inGravureEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="inGravureEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="po_avise_requests" EntityType="Self.po_avise_requests" />
           <EntitySet Name="po_avise_transportations" EntityType="Self.po_avise_transportations" />
         </EntityContainer>
@@ -77,7 +77,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="inGravureModelStoreContainer" CdmEntityContainer="inGravureEntities2">
+        <EntityContainerMapping StorageEntityContainer="inGravureModelStoreContainer" CdmEntityContainer="inGravureEntities3">
           <EntitySetMapping Name="po_avise_requests">
             <EntityTypeMapping TypeName="inGravureModel.po_avise_requests">
               <MappingFragment StoreEntitySet="po_avise_requests">

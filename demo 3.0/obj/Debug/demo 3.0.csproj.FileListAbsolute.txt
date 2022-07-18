@@ -1,0 +1,70 @@
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\demo 3.0.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\demo 3.0.pdb
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\csc.exe
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\csc.exe.config
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\csc.rsp
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\csi.exe
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\csi.exe.config
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\csi.rsp
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\System.Collections.Immutable.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\System.Reflection.Metadata.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\vbc.exe
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\vbc.exe.config
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\vbc.rsp
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\VBCSCompiler.exe
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\VBCSCompiler.exe.config
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\Antlr3.Runtime.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\EntityFramework.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\EntityFramework.SqlServer.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\Microsoft.Web.Infrastructure.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\Newtonsoft.Json.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Net.Http.Formatting.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.Helpers.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.Http.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.Http.WebHost.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.Mvc.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.Optimization.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.Razor.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.WebPages.Deployment.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.WebPages.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.WebPages.Razor.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\WebGrease.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\EntityFramework.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\EntityFramework.SqlServer.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.Helpers.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.Mvc.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.Optimization.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.Razor.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.WebPages.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.WebPages.Deployment.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.WebPages.Razor.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\Newtonsoft.Json.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\Antlr3.Runtime.pdb
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Net.Http.Formatting.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.Http.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\System.Web.Http.WebHost.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Github_repos\BaustelleOnline_new\demo 3.0\obj\Debug\demo 3.0.csproj.AssemblyReference.cache
+C:\Github_repos\BaustelleOnline_new\demo 3.0\obj\Debug\demo 3.0.csproj.CoreCompileInputs.cache
+C:\Github_repos\BaustelleOnline_new\demo 3.0\obj\Debug\demo 3.0.csproj.CopyComplete
+C:\Github_repos\BaustelleOnline_new\demo 3.0\obj\Debug\demo 3.0.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\obj\Debug\demo 3.0.pdb
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\System.Buffers.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\System.Memory.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\System.Numerics.Vectors.dll
+C:\Github_repos\BaustelleOnline_new\demo 3.0\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll

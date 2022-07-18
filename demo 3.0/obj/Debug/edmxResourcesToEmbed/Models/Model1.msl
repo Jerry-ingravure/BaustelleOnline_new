@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="inGravureModelStoreContainer" CdmEntityContainer="inGravureEntities6">
+    <EntitySetMapping Name="po_avise_entrance_unloading">
+      <EntityTypeMapping TypeName="inGravureModel.po_avise_entrance_unloading">
+        <MappingFragment StoreEntitySet="po_avise_entrance_unloading">
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="fk_po_avise_request_uid" ColumnName="fk_po_avise_request_uid" />
+          <ScalarProperty Name="ordered_by" ColumnName="ordered_by" />
+          <ScalarProperty Name="unloading_location" ColumnName="unloading_location" />
+          <ScalarProperty Name="type_of_verhicle" ColumnName="type_of_verhicle" />
+          <ScalarProperty Name="arrival_time" ColumnName="arrival_time" />
+          <ScalarProperty Name="dur" ColumnName="dur" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="po_avise_requests">
+      <EntityTypeMapping TypeName="inGravureModel.po_avise_requests">
+        <MappingFragment StoreEntitySet="po_avise_requests">
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="fk_po_avise_request_uid" ColumnName="fk_po_avise_request_uid" />
+          <ScalarProperty Name="material" ColumnName="material" />
+          <ScalarProperty Name="supplier" ColumnName="supplier" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="uom" ColumnName="uom" />
+          <ScalarProperty Name="unloading" ColumnName="unloading" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="po_avise_transportations">
+      <EntityTypeMapping TypeName="inGravureModel.po_avise_transportations">
+        <MappingFragment StoreEntitySet="po_avise_transportations">
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="fk_po_avise_request_uid" ColumnName="fk_po_avise_request_uid" />
+          <ScalarProperty Name="start_time" ColumnName="start_time" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="transport_typ" ColumnName="transport_typ" />
+          <ScalarProperty Name="material" ColumnName="material" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="uom" ColumnName="uom" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

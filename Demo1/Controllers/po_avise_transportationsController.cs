@@ -10,17 +10,17 @@ using Demo1.Models;
 
 namespace Demo1.Controllers
 {
-    public class po_avise_transportationsController : Controller
+    public class Po_avise_transportationsController : Controller
     {
-        private inGravureEntities2 db = new inGravureEntities2();
+        private inGravureEntities3 db = new inGravureEntities3();
 
-        // GET: po_avise_transportations
+        // GET: Po_avise_transportations
         public ActionResult Index()
         {
             return View(db.po_avise_transportations.ToList());
         }
 
-        // GET: po_avise_transportations/Details/5
+        // GET: Po_avise_transportations/Details/5
         public ActionResult Details(Guid? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace Demo1.Controllers
             return View(po_avise_transportations);
         }
 
-        // GET: po_avise_transportations/Create
+        // GET: Po_avise_transportations/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: po_avise_transportations/Create
+        // POST: Po_avise_transportations/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -59,7 +59,7 @@ namespace Demo1.Controllers
             return View(po_avise_transportations);
         }
 
-        // GET: po_avise_transportations/Edit/5
+        // GET: Po_avise_transportations/Edit/5
         public ActionResult Edit(Guid? id)
         {
             if (id == null)
@@ -74,7 +74,7 @@ namespace Demo1.Controllers
             return View(po_avise_transportations);
         }
 
-        // POST: po_avise_transportations/Edit/5
+        // POST: Po_avise_transportations/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -90,7 +90,7 @@ namespace Demo1.Controllers
             return View(po_avise_transportations);
         }
 
-        // GET: po_avise_transportations/Delete/5
+        // GET: Po_avise_transportations/Delete/5
         public ActionResult Delete(Guid? id)
         {
             if (id == null)
@@ -105,7 +105,7 @@ namespace Demo1.Controllers
             return View(po_avise_transportations);
         }
 
-        // POST: po_avise_transportations/Delete/5
+        // POST: Po_avise_transportations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(Guid id)

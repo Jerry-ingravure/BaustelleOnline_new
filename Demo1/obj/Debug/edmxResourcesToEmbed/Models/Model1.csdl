@@ -27,7 +27,7 @@
     <Property Name="material" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="state" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityContainer Name="inGravureEntities2" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="inGravureEntities3" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="po_avise_requests" EntityType="Self.po_avise_requests" />
     <EntitySet Name="po_avise_transportations" EntityType="Self.po_avise_transportations" />
   </EntityContainer>

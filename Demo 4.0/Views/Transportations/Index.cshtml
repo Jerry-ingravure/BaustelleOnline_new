@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Demo_4._0.Models.po_avise_transportations>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.start_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.transport_typ)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.state)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.start_time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.transport_typ)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.state)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.uid }) |
+                @Html.ActionLink("Details", "Details", new { id = item.uid }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.uid })
+            </td>
+        </tr>
+    }
+
+</table>
+<td>
+    @Html.ActionLink(" Back to request", "Index", "po_avise_requests")
+</td>
