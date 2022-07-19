@@ -1,0 +1,66 @@
+﻿@model Demo_4._0.Models.po_avise_requests
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>po_avise_requests</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fk_po_avise_request_uid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fk_po_avise_request_uid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.material)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.material)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.supplier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.supplier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.uom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unloading)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unloading)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.uid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

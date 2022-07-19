@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="inGravureEntities-Web.config Connection String" description="inGravureEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=h2732830.stratoserver.net\UI4INFINITY;initial catalog=inGravure;user id=ingravure;password=0yCl3PL4EYXK076QQJxt;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Github_repos\\BaustelleOnline_new\\Demo\ 4\.0\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='inGravureEntities']/@connectionString" />
+  </parameter>
+  <parameter name="inGravureConnectionString-Web.config Connection String" description="inGravureConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=h2732830.stratoserver.net\UI4INFINITY;Initial Catalog=inGravure;User ID=ingravure;Password=0yCl3PL4EYXK076QQJxt;MultipleActiveResultSets=True;Application Name=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Github_repos\\BaustelleOnline_new\\Demo\ 4\.0\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='inGravureConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Demo_4._0.Models.po_avise_entrance_unloading>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ordered_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.unloading_location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type_of_verhicle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arrival_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dur)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.po_avise_requests.material)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ordered_by)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.unloading_location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type_of_verhicle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.arrival_time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.po_avise_requests.material)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.uid }) |
+                @Html.ActionLink("Details", "Details", new { id = item.uid }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.uid })
+            </td>
+        </tr>
+    }
+
+</table>
+<td>
+    @Html.ActionLink(" Back to request", "Index", "po_avise_requests")
+</td>
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryui")
+    @Styles.Render("~/Content/cssjqryUi")
+
+    <script type="text/javascript">
+
+     $(document).ready(function () {
+         $('input[type=datetime]').datepicker({
+             dateFormat: "dd/M/yy",
+             changeMonth: true,
+             changeYear: true,
+             yearRange: "-60:+0"
+         });
+
+     });
+    </script>
+
+} 
